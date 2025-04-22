@@ -22,6 +22,58 @@
     portfolio-very-theme{
       display: block;
     }
+
+    
+     .screenContainer {
+      display: flex;
+      height: 100vh;
+      width: 100vw;
+      padding: 2rem;
+      box-sizing: border-box;
+      justify-content: space-between;
+      align-items: center; 
+    }
+
+    .contentContainer {
+      padding: 1rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: center; 
+    }
+
+   
+    .imageContainer {
+      padding: 1rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .screenImage {
+      max-width: 100%;
+      max-height: 100%;
+      object-fit: contain;
+    }
+
+
+    .screenLeft .screenContainer {
+      flex-direction: row; 
+    }
+
+  
+    .screenRight .screenContainer {
+      flex-direction: row-reverse; 
+    }
+    
+    .screenBottom .screenContainer {
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+   
+    
+
+    
     
   </style>
   <title>portfolio-very-theme</title>
@@ -30,25 +82,74 @@
 
 <body>
   <portfolio-very-theme>
-    <portfolio-screen screenNumber="1">
-      <h1>Welcome to Screen 1</h1>
-      <p>This is content for the first screen.</p>
+    <portfolio-screen screenNumber="1" title="About" class="screenRight">
+      <div class="screenContainer">
+        <div class="contentContainer">
+          <h1 class="screenHeader">About</h1>
+          <p>
+            I'm a sophomore at Pennsylvania State University, majoring in Cybersecurity Analytics and Operations. I have a strong interest in data security and cloud technologies. I am compTIA Network+ and compTIA Security+ certified. I am looking to explore opportunities in Information & Technology and Cybersecurity.
+          </p>
+        </div>
+        <div class="imageContainer">
+          <img class="screenImage" src="https://upload.wikimedia.org/wikipedia/commons/1/11/Test-Logo.svg" alt="Me">
+        </div>
+      </div>
     </portfolio-screen>
-    <portfolio-screen screenNumber="2">
-      <h1>Welcome to Screen 2</h1>
-      <p>This is content for the first screen.</p>
+
+    <portfolio-screen screenNumber="2" title="Research" class="screenLeft">
+      <div class="screenContainer">
+        <div class="contentContainer">
+          <h1 class="screenHeader">Research</h1> 
+          <p>
+            tes test tsetsetest est set
+          </p>
+        </div>
+        <div class="imageContainer">
+          <img class="screenImage" src="https://upload.wikimedia.org/wikipedia/commons/1/11/Test-Logo.svg" alt="Research">
+        </div>
+      </div>
     </portfolio-screen>
-    <portfolio-screen screenNumber="3">
-      <h1>Welcome to Screen 3</h1>
-      <p>This is content for the first screen.</p>
+
+    <portfolio-screen screenNumber="3" title="Presentations & Publications" class="screenRight">
+      <div class="screenContainer">
+        <div class="contentContainer">
+          <h1 class="screenHeader">Presentations & Publications</h1>
+          <p>
+           tset set est set set est set set est set se
+          </p>
+        </div>
+        <div class="imageContainer">
+          <img class="screenImage" src="https://upload.wikimedia.org/wikipedia/commons/1/11/Test-Logo.svg" alt="Publications">
+        </div>
+      </div>
     </portfolio-screen>
-    <portfolio-screen screenNumber="4">
-      <h1>Welcome to Screen 4</h1>
-      <p>This is content for the first screen.</p>
+
+    <portfolio-screen screenNumber="4" title="Professional Development" class="screenLeft">
+      <div class="screenContainer">
+        <div class="contentContainer">
+          <h1 class="screenHeader">Professional Development</h1>
+          <p>
+            test test tsetse test est est set set 
+          </p>
+        </div>
+        <div class="imageContainer">
+          <img class="screenImage" src="https://upload.wikimedia.org/wikipedia/commons/1/11/Test-Logo.svg" alt="Professional Development">
+        </div>
+      </div>
     </portfolio-screen>
-    <portfolio-screen screenNumber="5">
-      <h1>Welcome to Screen 5</h1>
-      <p>This is content for the first screen.</p>
+
+    <portfolio-screen screenNumber="5" title="Contact" class="screenBottom>
+      <div class="screenContainer">
+        <div class="contentContainer">
+          <h1 class="screenHeader">Contact</h1>
+          <p>
+            test set est set set set est setestes
+          </p>
+        </div>
+        <div class="imageContainer">
+          <img class="screenImage" src="https://upload.wikimedia.org/wikipedia/commons/1/11/Test-Logo.svg" alt="Contact">
+        </div>
+      </div>
     </portfolio-screen>
   </portfolio-very-theme>
 
