@@ -72,4 +72,4 @@ export class ScrollButton extends DDDSuper(I18NMixin(LitElement)) {
   }
 }
 
-globalThis.customElements.define(PortfolioVeryTheme.tag, PortfolioVeryTheme);
+globalThis.customElements.define(ScrollButton.tag, ScrollButton);

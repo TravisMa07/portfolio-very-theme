@@ -67,12 +67,6 @@ export class PortfolioVeryTheme extends DDDSuper(I18NMixin(LitElement)) {
         font-size: var(--portfolio-very-theme-label-font-size, var(--ddd-font-size-s));
       }
 
-      ::slotted(portfolio-screen){
-        height: 100vh;
-        width: 100vw;
-        box-sizing: border-box;
-      }
-
       ::slotted(portfolio-screen[screenNumber="1"]) {
         background-color: var(--ddd-theme-default-beaverBlue); 
       }
@@ -89,6 +83,7 @@ export class PortfolioVeryTheme extends DDDSuper(I18NMixin(LitElement)) {
         background-color: var(--ddd-theme-default-potential50);
       }
 
+    
     `];
   }
 

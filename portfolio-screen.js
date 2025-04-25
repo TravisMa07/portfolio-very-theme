@@ -71,22 +71,6 @@ export class PortfolioScreen extends DDDSuper(I18NMixin(LitElement)) {
         box-sizing: border-box;
       }
 
-      ::slotted(portfolio-screen[screenNumber="1"]) {
-        background-color: var(--ddd-theme-default-beaverBlue); 
-      }
-      ::slotted(portfolio-screen[screenNumber="2"]) {
-        background-color: var(--ddd-theme-default-nittanyNavy); 
-      }
-      ::slotted(portfolio-screen[screenNumber="3"]) {
-        background-color: var(--ddd-theme-default-navy40);
-      }
-      ::slotted(portfolio-screen[screenNumber="4"]) {
-        background-color: var(--ddd-theme-default-potentialMidnight); 
-      }
-      ::slotted(portfolio-screen[screenNumber="5"]) {
-        background-color: var(--ddd-theme-default-potential50);
-      }
-
 
       
      
