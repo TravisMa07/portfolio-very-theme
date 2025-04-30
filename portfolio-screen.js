@@ -73,6 +73,8 @@ export class PortfolioScreen extends DDDSuper(I18NMixin(LitElement)) {
         box-sizing: border-box;
       }
 
+      
+
       .screenContainer {
       display: flex;
       height: 100vh;
@@ -128,12 +130,14 @@ export class PortfolioScreen extends DDDSuper(I18NMixin(LitElement)) {
   firstUpdated() {
     if (this.screenType) {
       this.classList.add(this.screenType);
+      this.id = `screen-${this.screenNumber}`;
     }
   }
   
   // Lit render the HTML
   render() {
     return html`
+    <div class="wrapper" id="screen-${this.screenNumber}">
       <div class="screenContainer ${this.screenType}">
         <div class="contentContainer">
           <h1>${this.title}</h1>
@@ -142,6 +146,7 @@ export class PortfolioScreen extends DDDSuper(I18NMixin(LitElement)) {
         <div class="imageContainer">
           <slot name="image"></slot>
         </div>
+      </div>
       </div>
     `;
   }

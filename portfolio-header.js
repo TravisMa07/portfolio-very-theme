@@ -5,7 +5,7 @@
 import { LitElement, html, css } from "lit";
 import { DDDSuper } from "@haxtheweb/d-d-d/d-d-d.js";
 import { I18NMixin } from "@haxtheweb/i18n-manager/lib/I18NMixin.js";
-
+import "./portfolio-header-button.js";
 /**
  * `portfolio-header`
  * 
@@ -87,11 +87,11 @@ export class PortfolioHeader extends DDDSuper(I18NMixin(LitElement)) {
   render() {
     return html`
      <div class="banner">
-        <a href="#screen-1">About</a>
-        <a href="#screen-2">Research</a>
-        <a href="#screen-3">Presentations & Publications</a>
-        <a href="#screen-4">Professional Development</a>
-        <a href="#screen-5">Contact</a>
+        <portfolio-header-button title="About" screen-id="screen-1"></portfolio-header-button>
+        <portfolio-header-button title="Research" screen-id="screen-2"></portfolio-header-button>
+        <portfolio-header-button title="Presentations & Publications" screen-id="screen-3"></portfolio-header-button>
+        <portfolio-header-button title="Professional Development" screen-id="screen-4"></portfolio-header-button>
+        <portfolio-header-button title="Contact" screen-id="screen-5"></portfolio-header-button>
       </div>
       <slot></slot>
 `;

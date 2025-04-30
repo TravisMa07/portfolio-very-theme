@@ -21,6 +21,15 @@ export class PortfolioHeaderButton extends DDDSuper(I18NMixin(LitElement)) {
   constructor() {
     super();
     this.title = "";
+    this.screenId = "";
+    this.clickHandler = () => {
+      if (this.screenId) {
+        const target = document.querySelector(`#${this.screenId}`);
+        if (target) {
+          target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+      }
+    };
     this.t = this.t || {};
     this.t = {
       ...this.t,
@@ -38,6 +47,7 @@ export class PortfolioHeaderButton extends DDDSuper(I18NMixin(LitElement)) {
     return {
       ...super.properties,
       title: { type: String },
+      screenId: { type: String, attribute: 'screen-id'  },
     };
   }
 
@@ -58,16 +68,29 @@ export class PortfolioHeaderButton extends DDDSuper(I18NMixin(LitElement)) {
       h3 span {
         font-size: var(--portfolio-very-theme-label-font-size, var(--ddd-font-size-s));
       }
+
+      .buttonSelection {
+        display: inline-block;
+        margin: 10px;
+        padding: 10px 15px;
+        color: white;
+        text-decoration: none;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        border-radius: var(--ddd-radius-sm);
+      }
     `];
   }
+
 
   // Lit render the HTML
   render() {
     return html`
-<div class="wrapper">
-  <h3><span>${this.t.title}:</span> ${this.title}</h3>
-  <slot></slot>
-</div>`;
+<div class="buttonSelection" @click="${this.clickHandler}">
+        ${this.title}
+        <slot></slot>
+      </div>
+      `;
   }
 }
 
