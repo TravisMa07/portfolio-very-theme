@@ -47,22 +47,26 @@ export class PortfolioVeryTheme extends DDDSuper(I18NMixin(LitElement)) {
   static get styles() {
     return [super.styles,
     css`
+
+    
       :host {
         display: block;
         color: var(--ddd-theme-primary);
         background-color: var(--ddd-theme-accent);
         font-family: var(--ddd-font-navigation);
+        box-sizing: border-box;
         width: 100vw;
         height: 100vh;
-        box-sizing: border-box;
-
       }
+      
+
+
       .wrapper {
       display: flex;
       flex-direction: column;
-        margin: var(--ddd-spacing-2);
-        padding: var(--ddd-spacing-4);
       }
+
+      
       h3 span {
         font-size: var(--portfolio-very-theme-label-font-size, var(--ddd-font-size-s));
       }

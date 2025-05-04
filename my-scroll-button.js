@@ -59,17 +59,18 @@ export class MyScrollButton extends DDDSuper(I18NMixin(LitElement)) {
 
       :host {
         position: fixed;
-        bottom: 2rem;
-        right: 2rem;
+        bottom: var(--ddd-spacing-10);
+        right: var(--ddd-spacing-10);
         z-index: 9999;
         display: block;
       }
       
+      
       button {
         background-color: var(--ddd-theme-default-inventOrange);
-        color: white;
-        border: none;
-        border-radius: 50%;
+        color: var(--ddd-theme-default-white);
+        border: var(--ddd-border-0);
+        border-radius: var(--ddd-radius-lg);
         width: 50px;
         height: 50px;
         display: flex;
@@ -79,7 +80,7 @@ export class MyScrollButton extends DDDSuper(I18NMixin(LitElement)) {
       }
   
       .buttonInside {
-        font-size: 2.5rem;
+        font-size: var(--ddd-spacing-12);
       }
 
     `];
@@ -88,6 +89,8 @@ export class MyScrollButton extends DDDSuper(I18NMixin(LitElement)) {
   scrollToTop() {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   }
+
+  
   
   // Lit render the HTML
   render() {

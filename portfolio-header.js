@@ -51,10 +51,7 @@ export class PortfolioHeader extends DDDSuper(I18NMixin(LitElement)) {
         background-color: var(--ddd-theme-accent);
         font-family: var(--ddd-font-navigation);
       }
-      .wrapper {
-        margin: var(--ddd-spacing-2);
-        padding: var(--ddd-spacing-4);
-      }
+      
       h3 span {
         font-size: var(--portfolio-very-theme-label-font-size, var(--ddd-font-size-s));
       }
@@ -64,22 +61,24 @@ export class PortfolioHeader extends DDDSuper(I18NMixin(LitElement)) {
         display: flex;
         justify-content: center;
         align-items: center;
-        background-color: #00000066;
-        opacity: 0.8;
+        background-color: var(--ddd-theme-default-coalyGray);
+        opacity: 0.6;
         position: fixed;
-        top: 50px;
-        left: 0;
+        top: var(--ddd-spacing-13);
+        left: var(--ddd-spacing-0);
         height: 100px;
-        right: 0;
+        right: var(--ddd-spacing-0);
         z-index: 1;
       }
       .banner a {
-        margin: 10px;
-        padding: 10px;
-        color: white;
+        margin: var(--ddd-spacing-3);
+        padding: var(--ddd-spacing-3);
+        color: var(--ddd-theme-default-white);
         text-decoration: none;
       }
+
       
+
     `];
   }
 

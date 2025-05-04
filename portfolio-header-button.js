@@ -22,19 +22,17 @@ export class PortfolioHeaderButton extends DDDSuper(I18NMixin(LitElement)) {
     super();
     this.title = "";
     this.screenId = "";
+    this.href = "";
     this.clickHandler = () => {
       if (this.screenId) {
+        window.location.hash = this.screenId;
         const target = document.querySelector(`#${this.screenId}`);
         if (target) {
           target.scrollIntoView({ behavior: 'smooth', block: 'start' });
         }
       }
     };
-    this.t = this.t || {};
-    this.t = {
-      ...this.t,
-      title: "Title",
-    };
+
     this.registerLocalization({
         context: this,
         localesPath: new URL("./locales/", import.meta.url).href, 
@@ -71,14 +69,17 @@ export class PortfolioHeaderButton extends DDDSuper(I18NMixin(LitElement)) {
 
       .buttonSelection {
         display: inline-block;
-        margin: 10px;
-        padding: 10px 15px;
-        color: white;
+        margin: var(--ddd-spacing-3);
+        padding: var(--ddd-spacing-3), var(--ddd-spacing-5);
+        color: var(--ddd-theme-default-white);
         text-decoration: none;
         cursor: pointer;
         transition: all 0.3s ease;
         border-radius: var(--ddd-radius-sm);
       }
+
+
+      
     `];
   }
 

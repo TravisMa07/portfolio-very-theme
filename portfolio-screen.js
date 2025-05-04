@@ -48,21 +48,19 @@ export class PortfolioScreen extends DDDSuper(I18NMixin(LitElement)) {
   static get styles() {
     return [super.styles,
     css`
+
+    
       :host {
         display: block;
         color: var(--ddd-theme-primary);
         background-color: var(--ddd-theme-accent);
         font-family: var(--ddd-font-navigation);
-        height: 100vh;
-        width: 100vw;
         box-sizing: border-box;
-        
+        width: 100vw;
+        height: 100vh;
       }
       
-      .wrapper {
-        margin: var(--ddd-spacing-2);
-        padding: var(--ddd-spacing-4);
-      }
+      
       h3 span {
         font-size: var(--portfolio-very-theme-label-font-size, var(--ddd-font-size-s));
       }
@@ -79,14 +77,14 @@ export class PortfolioScreen extends DDDSuper(I18NMixin(LitElement)) {
       display: flex;
       height: 100vh;
       width: 100vw;
-      padding: 2rem;
+      padding: var(--ddd-spacing-8);
       box-sizing: border-box;
       justify-content: space-between;
       align-items: center; 
     }
 
     .contentContainer {
-      padding: 1rem;
+      padding: var(--ddd-spacing-4);
       display: flex;
       flex-direction: column;
       justify-content: center; 
@@ -94,7 +92,7 @@ export class PortfolioScreen extends DDDSuper(I18NMixin(LitElement)) {
 
    
     .imageContainer {
-      padding: 1rem;
+      padding: var(--ddd-spacing-4);
       display: flex;
       justify-content: center;
       align-items: center;
@@ -121,6 +119,8 @@ export class PortfolioScreen extends DDDSuper(I18NMixin(LitElement)) {
   flex-direction: column;
   justify-content: space-between;
 }
+
+
 
       
      

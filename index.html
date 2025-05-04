@@ -8,25 +8,48 @@
   <meta name="Description" content="Demonstration for portfolio-very-theme">
 
   <style>
-    :root, html, body {
-      margin: 0;
-      padding: 0;
-    }
-    portfolio-very-theme {
-      margin: var(--ddd-spacing-2);
-   
-    }
-    portfolio-very-theme:hover {
-      box-shadow: var(--ddd-boxShadow-sm);
-    }
-    portfolio-very-theme{
-      display: block;
-    }
-
-
-
-
+   html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+  scroll-behavior: smooth;
+}
+body{
+  overflow-x: hidden; 
+}
     
+portfolio-very-theme {
+  display: block;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+portfolio-screen {
+  display: block;
+  min-height: 100vh;
+  width: 100%;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+
+portfolio-header {
+  display: block;
+  margin: 0;
+  padding: 0;
+}
+
+.screenImage {
+  max-width: 100%;
+  height: auto;
+}
+
+
+
   </style>
   <title>portfolio-very-theme</title>
 </head>
@@ -38,58 +61,81 @@
 
     <portfolio-screen screenNumber="1" id="screen-1" title="About" screenType="screenRight">
       <div slot="content">
-        <p>I'm a sophomore at Pennsylvania State University, majoring in Cybersecurity Analytics and Operations...</p>
+        <p>I'm a sophomore at Pennsylvania State University, majoring in Cybersecurity Analytics and Operations. I have work as an IT support position since 2023 and done apprentience experience as an system admin. I am interested in expanding into cybersecurity in future roles like security engineer or cloud security related roles.</p>
       </div>
       <div slot="image">
-        <img class="screenImage" src="https://upload.wikimedia.org/wikipedia/commons/1/11/Test-Logo.svg" alt="Me">
+        <img class="screenImage" src="./ist256photo1.png" alt="Me">
       </div>
     </portfolio-screen>
 
     <portfolio-screen screenNumber="2" id="screen-2" title="Research" screenType="screenLeft">
       <div slot="content">
-          <p>
-            tes test tsetsetest est set
-          </p>
+        <h3>Research Areas</h3>
+        <ul>
+          <li>System and Network</li>
+          <li>Cybersecurity (network, data, architecture, and application)</li>
+          <li>Cloud Security</li>
+        </ul>
+      
+        <h3>Projects</h3>
+        <ul>
+          <li>
+            Designed and implemented a SIEM and IDS/IPS system to monitor, detect, and prevent SQL injection attacks.
+          </li>
+          <li>
+            Created a File Integrity Checker using hashing algorithms to detect unauthorized changes to files. The system alerts the user if a file has been modified and reports the incident to the SIEM.
+          </li>
+        </ul>
         </div>
         <div slot="image">
-          <img class="screenImage" src="https://upload.wikimedia.org/wikipedia/commons/1/11/Test-Logo.svg" alt="Research">
+          <img class="screenImage" src="./ist256photo2.png" alt="Research">
         </div>
     </portfolio-screen>
 
     <portfolio-screen screenNumber="3" id="screen-3" title="Presentations & Publications" screenType="screenRight">
       <div slot="content">
+        <h3>Automating System Administration with Scripts</h3>
           <p>
-           tset set est set set est set set est set se
+            Explored how scripting languages like Bash and PowerShell can be used to automate routine system administration tasks during my apprenticeship as a system administrator. This included creating scripts for user management, log cleanup, and software updates to improve operational efficiency and reduce manual errors.
+          </p>
+          <h3>Colonial Pipeline Ransomware</h3>
+          <p>
+            A detailed presentation analyzing the 2021 Colonial Pipeline ransomware incident, its impact on national infrastructure, and lessons learned in cyber defense and incident response. Delivered as part of a cybersecurity seminar project in fall 2023.
           </p>
         </div>
         <div slot="image">
-          <img class="screenImage" src="https://upload.wikimedia.org/wikipedia/commons/1/11/Test-Logo.svg" alt="Publications">
+          <img class="screenImage" src="./ist256photo3.jpg" alt="Publications">
         </div>
-      </div>
     </portfolio-screen>
 
     <portfolio-screen screenNumber="4" id="screen-4" title="Professional Development" screenType="screenLeft">
       <div slot="content">
+          <h3>Apprentience System Administrator</h3>
           <p>
-            test test tsetse test est est set set 
+            Gained hands-on experience in system administration as part of my program at my local High School, including system and network management, user support, and fundamental security practices.
           </p>
+          <h3>IT Support</h3>
+          <p>
+            Gained hands-on experience in IT support at my local High School, including troubleshooting hardware and software issues, providing technical assistance to users, and maintaining system performance.
+          </p>
+
         </div>
         <div slot="image">
-          <img class="screenImage" src="https://upload.wikimedia.org/wikipedia/commons/1/11/Test-Logo.svg" alt="Professional Development">
+          <img class="screenImage" src="./ist256photo4.jpg" alt="Professional Development">
         </div>
-      </div>
     </portfolio-screen>
 
     <portfolio-screen screenNumber="5" id="screen-5" title="Contact" screenType="screenBottom">
       <div slot="content">
-          <p>
-            test set est set set set est setestes
-          </p>
+        <p>If you have any questions or would like to connect, feel free to reach out to me using my contact information.</p>
+        <ul>
+          <li>Email: <a href="mailto:travis07ma@gmail.com">travis07ma@gmail.com</a></li>
+          <li>Phone: <a href="tel:+4844329354">+1 (484) 432-9354</a></li>
+        </ul>
         </div>
         <div slot="image">
-          <img class="screenImage" src="https://upload.wikimedia.org/wikipedia/commons/1/11/Test-Logo.svg" alt="Contact">
+          <img class="screenImage" src="./ist256photo5.webp" alt="Contact">
         </div>
-      </div>
     </portfolio-screen>
   </portfolio-very-theme>
 
